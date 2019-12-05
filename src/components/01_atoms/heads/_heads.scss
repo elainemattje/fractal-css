@@ -1,0 +1,31 @@
+h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+}
+
+h1{
+    font-size: 40px;
+    font-family: $font-secondary;
+    font-weight: normal;
+    line-height: 46px;
+    color: $color-inverted;
+}
+
+h2, h3, h4{
+    font-size: 20px;
+    font-family: $font-primary;
+    font-weight: normal;
+    line-height: 30px;
+    color: $color-inverted;
+}
+
+h3, h4{
+    color: $color-primary;
+    font-weight: bold;
+}
+
+h4{
+    font-size: 14px; 
+}
+
+
+

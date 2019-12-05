@@ -1,0 +1,9 @@
+{
+    "context": {
+        "normal": "NORMAL",
+        "active": "PRESSED",
+        "disabled": "DISABLED",
+        "button": "BUTTON",
+        "share": "SHARE"
+    }
+}

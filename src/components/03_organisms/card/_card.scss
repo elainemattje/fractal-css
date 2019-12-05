@@ -1,0 +1,57 @@
+.card {
+    box-shadow: 3px 3px 6px 1px rgba(0,0,0,0.75);
+    width: 340px;
+    display: grid;
+    
+    &__image {
+        height: 200px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px;
+        height: 200px;
+        background-color: $color-inverted;
+        
+        &.text{
+            width: 100%;              
+        }
+    }
+
+    &--big{
+        width: 700px;
+        height: 400px;
+        padding: 100px 100px 154px 100px;
+        background-image: url("http://www.viajantecomum.com/wp-content/uploads/2017/04/praia-de-bacutia-1.jpg");
+        background-size: cover;
+
+    }
+}
+
+.likes-comments-share{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.likes-comments{
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    justify-content: space-between;
+}
+
+.title{
+    display: flex;
+    flex-flow: row wrap;   
+    justify-content: space-between; 
+    padding-bottom: 40px;  
+}
+
+
+
+
+
+     

@@ -1,0 +1,192 @@
+input{
+    display: none;
+}
+
+label {
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 5px 5px;
+    margin-top: 5px;
+    margin-left: 10px;
+    border-radius: 4px;
+
+    &.check{
+        border: 3px solid $color-primary;
+        position: relative;
+
+        &.check--red{
+            border: 3px solid $color-pink-red;  
+        }
+    }
+    
+    &.radio-ck{
+        border-radius: 50%;
+        border: 3px solid $color-primary;
+        position: relative;   
+
+        &.radio-ck--red{            
+            border: 3px solid $color-pink-red;
+        }
+
+    }
+}
+
+.radio input[type="radio"]:checked + .radio-ck::before{
+    content: " ";
+    width: 14px;
+    height: 14px;
+    border: 4px solid $color-primary;
+    margin: auto;
+    position: absolute;
+    border-radius: 100px;
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    right: 2.3px;
+    background-color: $color-primary;
+    box-sizing: border-box;
+}
+
+.radio input[type="radio"]:checked + .radio-ck.radio-ck--red::before{
+    border: 4px solid $color-pink-red;
+    background-color: $color-pink-red;
+}
+
+.checkbox input[type="checkbox"]:checked + .check::before{
+    content: " ";
+    width: 10px;
+    height: 15px;
+    border: 3px solid $color-primary;
+    padding: 1px 1px;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 3px;
+    bottom: 40px;
+    left: 6px;
+    right: 4px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    box-sizing: border-box;    
+}
+
+
+.checkbox input[type="checkbox"]:checked + .check.check--red::before{
+    border: 3px solid $color-pink-red;
+    border-top-color: transparent;
+    border-left-color: transparent;       
+}
+
+.on{
+    width: 88px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: $color-pink-red;
+    border: 1px solid $color-pink-red;
+    position: relative;
+
+    &.on::after{
+        content: "";
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: $color-inverted;
+        border: 1px solid $color-inverted;
+        position: absolute;
+        top: 1.5px;
+        left: 4px;
+        margin: 0;
+    }
+
+    &.on::before{
+        content: "OFF";
+        font-size: 12px;
+        color: $color-inverted;
+        position: absolute;
+        left: 45px;
+        top: 13px;
+    }
+
+}
+
+.on_off input[type="checkbox"]:checked + .on{
+    content:"";
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+
+    &.on::after{
+        content: "";
+        left: 48px;
+        margin: 0;
+    }
+
+    &.on::before{
+        content: "ON";
+        left: 20px;
+    }
+}
+
+.on2{
+    width: 88px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: $color-pink-red;
+    border: 1px solid $color-pink-red;
+    position: relative;
+
+    &.on2::after{
+        content: "";
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+        background-color: $color-inverted;
+        border: 1px solid $color-inverted;
+        position: absolute;
+        top: 1.5px;
+        left: 4px;
+        margin: 0;
+    }
+
+    &.on2::before{
+        content: "X";
+        font-size: 20px;
+        font-family: sans-serif;
+        color: $color-primary;
+        position: absolute;
+        left: 55px;
+        top: 10px;
+    }
+
+}
+
+.on_off_2 input[type="checkbox"]:checked + .on2{
+    content:"";
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+
+    &.on2::after{
+        content: "";
+        left: 48px;
+        margin: 0;
+    }
+
+    &.on2::before{
+        content: "";
+        left: 20px;
+        color: $color-inverted;
+        width: 11px;
+        height: 16px;
+        border: 2px solid $color-inverted;
+        padding: 1px 1px;
+        position: absolute;
+        transform: rotate(45deg);
+        top: 7px;
+        bottom: 40px;
+        right: 1px;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        box-sizing: border-box;    
+    }
+}
+   
+

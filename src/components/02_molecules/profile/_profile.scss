@@ -1,0 +1,18 @@
+.profile{
+    background-color:$color-inverted;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+
+    &.img{
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        margin: auto;
+        top: 12px;
+        left: 12px;
+        border-radius: 0;
+    }
+}
+

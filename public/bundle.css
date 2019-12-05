@@ -44,3 +44,533 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+.btn {
+  border: 1px solid #333333;
+  background-color: #333333;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 17px 48px;
+  border-radius: 4px;
+  font-family: "Arial";
+  font-weight: bold;
+  transition: all 0.10s ease-in-out;
+  font-size: 12px; }
+  .btn, .btn:active, .btn:visited, .btn.active {
+    outline: none; }
+  .btn:active, .btn.active {
+    transition: all 0.20s ease-in-out;
+    border: 1px solid #007feb;
+    background-color: #007feb; }
+  .btn:disabled {
+    background-color: #AAAAAA;
+    border-color: #AAAAAA; }
+  .btn--large {
+    padding: 19px 142px;
+    font-size: 10px;
+    color: #FFFFFF; }
+    .btn--large.icon img {
+      background-color: transparent;
+      width: 16px; }
+  .btn--outline {
+    border: 2px solid #333333;
+    background-color: transparent;
+    color: #333333; }
+    .btn--outline:active, .btn--outline.active {
+      background-color: #FF6A67;
+      color: #007feb;
+      border: 2px solid #007feb; }
+    .btn--outline:disabled {
+      background-color: #FFFFFF;
+      color: #AAAAAA;
+      border: 2px solid #AAAAAA; }
+  .btn--none {
+    border: 2px solid transparent;
+    background-color: transparent;
+    color: #333333; }
+    .btn--none:active, .btn--none.active {
+      background-color: #FF6A67;
+      color: #333333;
+      border: 2px solid transparent; }
+    .btn--none:disabled {
+      background-color: transparent;
+      color: #AAAAAA;
+      border: 2px solid transparent; }
+    .btn--none.share {
+      cursor: pointer;
+      font-size: 14px;
+      padding: 0; }
+
+.controll {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333333;
+  border: 2px solid #333333; }
+  .controll.play {
+    width: 70px;
+    height: 70px;
+    background-color: transparent;
+    border: 2px solid #333333;
+    position: relative;
+    transform: rotate(0deg); }
+  .controll.play::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 18.7px;
+    border-color: transparent transparent transparent #333333;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .controll.close {
+    background-color: #FF6A67;
+    border: 2px solid #FF6A67;
+    position: relative; }
+  .controll.close::before, .controll.close::after {
+    content: " ";
+    width: 13px;
+    height: 13px;
+    border: 2px solid #333333;
+    padding: 1px 1px;
+    position: absolute;
+    top: 12px;
+    bottom: 40px;
+    right: 1px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    box-sizing: border-box; }
+  .controll.close::before {
+    transform: rotate(135deg);
+    left: 20px; }
+  .controll.close::after {
+    transform: rotate(315deg);
+    left: 4px; }
+  .controll.add {
+    position: relative; }
+  .controll.add::before {
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border: 2px solid #FFFFFF;
+    padding: 1px 1px;
+    position: absolute;
+    transform: rotate(180deg);
+    top: 17px;
+    bottom: 40px;
+    left: 17px;
+    right: 1px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    box-sizing: border-box; }
+  .controll.add::after {
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border: 2px solid #FFFFFF;
+    padding: 1px 1px;
+    position: absolute;
+    transform: rotate(0deg);
+    top: 9px;
+    bottom: 40px;
+    left: 9px;
+    right: 1px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    box-sizing: border-box; }
+  .controll.checked {
+    position: relative; }
+  .controll.checked::before {
+    content: " ";
+    width: 11px;
+    height: 16px;
+    border: 2px solid #FFFFFF;
+    padding: 1px 1px;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 7px;
+    bottom: 40px;
+    left: 12px;
+    right: 1px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    box-sizing: border-box; }
+
+.arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid #FF6A67;
+  background-color: #FFFFFF; }
+  .arrow.right img, .arrow.left img {
+    background-color: #FFFFFF;
+    width: 16px;
+    height: 16px;
+    margin: auto; }
+  .arrow.right-2::after {
+    content: ">";
+    font-size: 15px;
+    font-weight: bold;
+    color: #333333; }
+  .arrow.left-2::after {
+    content: "<";
+    font-size: 15px;
+    font-weight: bold; }
+
+.menu {
+  width: 50px;
+  height: 50px;
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  display: inline; }
+  .menu.list .menu.four .menu.nine {
+    background-color: #FFFFFF;
+    width: 200px;
+    height: 200px;
+    fill: #FFFFFF; }
+  .menu.list {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-right: 1.5px solid #AAAAAA; }
+  .menu.nine {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-left: 1.5px solid #AAAAAA; }
+
+input {
+  display: none; }
+
+label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 5px 5px;
+  margin-top: 5px;
+  margin-left: 10px;
+  border-radius: 4px; }
+  label.check {
+    border: 3px solid #333333;
+    position: relative; }
+    label.check.check--red {
+      border: 3px solid #ff004d; }
+  label.radio-ck {
+    border-radius: 50%;
+    border: 3px solid #333333;
+    position: relative; }
+    label.radio-ck.radio-ck--red {
+      border: 3px solid #ff004d; }
+
+.radio input[type="radio"]:checked + .radio-ck::before {
+  content: " ";
+  width: 14px;
+  height: 14px;
+  border: 4px solid #333333;
+  margin: auto;
+  position: absolute;
+  border-radius: 100px;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  right: 2.3px;
+  background-color: #333333;
+  box-sizing: border-box; }
+
+.radio input[type="radio"]:checked + .radio-ck.radio-ck--red::before {
+  border: 4px solid #ff004d;
+  background-color: #ff004d; }
+
+.checkbox input[type="checkbox"]:checked + .check::before {
+  content: " ";
+  width: 10px;
+  height: 15px;
+  border: 3px solid #333333;
+  padding: 1px 1px;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 3px;
+  bottom: 40px;
+  left: 6px;
+  right: 4px;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  box-sizing: border-box; }
+
+.checkbox input[type="checkbox"]:checked + .check.check--red::before {
+  border: 3px solid #ff004d;
+  border-top-color: transparent;
+  border-left-color: transparent; }
+
+.on {
+  width: 88px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #ff004d;
+  border: 1px solid #ff004d;
+  position: relative; }
+  .on.on::after {
+    content: "";
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    position: absolute;
+    top: 1.5px;
+    left: 4px;
+    margin: 0; }
+  .on.on::before {
+    content: "OFF";
+    font-size: 12px;
+    color: #FFFFFF;
+    position: absolute;
+    left: 45px;
+    top: 13px; }
+
+.on_off input[type="checkbox"]:checked + .on {
+  content: "";
+  background-color: #333333;
+  border: 1px solid #333333; }
+  .on_off input[type="checkbox"]:checked + .on.on::after {
+    content: "";
+    left: 48px;
+    margin: 0; }
+  .on_off input[type="checkbox"]:checked + .on.on::before {
+    content: "ON";
+    left: 20px; }
+
+.on2 {
+  width: 88px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #ff004d;
+  border: 1px solid #ff004d;
+  position: relative; }
+  .on2.on2::after {
+    content: "";
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    position: absolute;
+    top: 1.5px;
+    left: 4px;
+    margin: 0; }
+  .on2.on2::before {
+    content: "X";
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #333333;
+    position: absolute;
+    left: 55px;
+    top: 10px; }
+
+.on_off_2 input[type="checkbox"]:checked + .on2 {
+  content: "";
+  background-color: #333333;
+  border: 1px solid #333333; }
+  .on_off_2 input[type="checkbox"]:checked + .on2.on2::after {
+    content: "";
+    left: 48px;
+    margin: 0; }
+  .on_off_2 input[type="checkbox"]:checked + .on2.on2::before {
+    content: "";
+    left: 20px;
+    color: #FFFFFF;
+    width: 11px;
+    height: 16px;
+    border: 2px solid #FFFFFF;
+    padding: 1px 1px;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 7px;
+    bottom: 40px;
+    right: 1px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: left; }
+
+h1 {
+  font-size: 40px;
+  font-family: "Georgia";
+  font-weight: normal;
+  line-height: 46px;
+  color: #FFFFFF; }
+
+h2, h3, h4 {
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: normal;
+  line-height: 30px;
+  color: #FFFFFF; }
+
+h3, h4 {
+  color: #333333;
+  font-weight: bold; }
+
+h4 {
+  font-size: 14px; }
+
+.image {
+  display: block;
+  width: 100%; }
+  .image--round {
+    border-radius: 4px; }
+  .image--avatar {
+    border-radius: 50%; }
+  .image--icon {
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    padding-top: 14px;
+    border-radius: 50%;
+    background-color: transparent;
+    src: "/assets/icons/profile-black.png"; }
+
+.text, span {
+  font-family: "Arial";
+  color: #333333;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left; }
+
+.--bold {
+  font-weight: bold; }
+
+.divisao {
+  width: 320px;
+  height: 1px;
+  background-color: #FFFFFF;
+  border-color: 1px solid #FFFFFF;
+  margin: 20px 0 40px 0; }
+
+.comments {
+  display: flex; }
+  .comments--img {
+    width: 16px;
+    height: 14.1px;
+    margin: 0 10px 0 0; }
+  .comments--bold {
+    font-family: "Arial";
+    font-size: 14px;
+    font-weight: bold; }
+
+.likes {
+  display: flex; }
+  .likes--img {
+    justify-content: flex-end;
+    width: 16px;
+    height: 14.1px;
+    margin: 0 10px 0 0; }
+  .likes--bold {
+    font-weight: bold; }
+
+.profile {
+  background-color: #FFFFFF;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative; }
+  .profile.img {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    margin: auto;
+    top: 12px;
+    left: 12px;
+    border-radius: 0; }
+
+.webpage {
+  display: flex; }
+  .webpage--img {
+    width: 16px;
+    height: 16px;
+    margin: 0 10px 0 0; }
+  .webpage--bold {
+    font-weight: bold; }
+
+.card {
+  box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.75);
+  width: 340px;
+  display: grid; }
+  .card__image {
+    height: 200px; }
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    height: 200px;
+    background-color: #FFFFFF; }
+    .card__content.text {
+      width: 100%; }
+  .card--big {
+    width: 700px;
+    height: 400px;
+    padding: 100px 100px 154px 100px;
+    background-image: url("http://www.viajantecomum.com/wp-content/uploads/2017/04/praia-de-bacutia-1.jpg");
+    background-size: cover; }
+
+.likes-comments-share {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.likes-comments {
+  display: flex;
+  flex-direction: row;
+  width: 45%;
+  justify-content: space-between; }
+
+.title {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding-bottom: 40px; }
+
+.grid-container {
+  width: 1440px;
+  display: grid;
+  grid-template-columns: 1060px 340px;
+  grid-template-rows: 400px 400px;
+  grid-gap: 20px;
+  padding: 20px;
+  background-color: #ff6a67; }
+
+.grid-container--card {
+  width: 1100px;
+  display: grid;
+  grid-template-columns: 340px 340px 340px;
+  grid-template-rows: 400px 400px;
+  grid-gap: 20px;
+  grid-template-areas: "card1 big ." "card3 card4 card5"; }
+  .grid-container--card.card1 {
+    grid-area: card1; }
+  .grid-container--card.big {
+    grid-area: big; }
+  .grid-container--card.card3 {
+    grid-area: card3; }
+  .grid-container--card.card4 {
+    grid-area: card4; }
+  .grid-container--card.card5 {
+    grid-area: card5; }
+
+.right.top {
+  padding: 36px 0 39px 0; }
+
+.right.p3 {
+  padding: 20px 0 20px 0; }
