@@ -509,7 +509,7 @@ h4 {
 
 .card {
   box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.75);
-  width: 340px;
+  width: 100%;
   display: grid; }
   .card__image {
     height: 200px; }
@@ -523,7 +523,6 @@ h4 {
     .card__content.text {
       width: 100%; }
   .card--big {
-    width: 700px;
     height: 400px;
     padding: 100px 100px 154px 100px;
     background-image: url("http://www.viajantecomum.com/wp-content/uploads/2017/04/praia-de-bacutia-1.jpg");
@@ -547,37 +546,44 @@ h4 {
   padding-bottom: 40px; }
 
 .grid-container {
-  width: 1440px;
+  width: 100%;
   height: auto;
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: 1060px 340px;
+  grid-template-columns: 3fr 1fr;
   grid-template-rows: auto auto;
   grid-gap: 20px;
   padding: 20px;
-  background-color: #ff6a67; }
+  background-color: purple; }
   .grid-container.top {
     padding: 36px 0 39px 0; }
+  @media screen and (min-width: 768px) {
+    .grid-container {
+      background-color: green; } }
+  @media screen and (min-width: 1024px) {
+    .grid-container {
+      background-color: red; } }
 
 .h3 {
   margin: 40px 0 20px 0; }
 
-.right .text--p3 {
+.grid-container__news .text--p3 {
   margin: 20px 0 20px 0; }
 
-.grid-container--card {
-  width: 1100px;
+.grid-container__card {
+  width: 100%;
   display: grid;
-  grid-template-columns: 340px 340px 340px;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 400px 400px;
   grid-gap: 20px;
-  grid-template-areas: "card1 big ." "card3 card4 card5"; }
-  .grid-container--card.card1 {
+  grid-template-areas: "card1 big big" "card3 card4 card5"; }
+  .grid-container__card.card1 {
     grid-area: card1; }
-  .grid-container--card.big {
+  .grid-container__card.big {
     grid-area: big; }
-  .grid-container--card.card3 {
+  .grid-container__card.card3 {
     grid-area: card3; }
-  .grid-container--card.card4 {
+  .grid-container__card.card4 {
     grid-area: card4; }
-  .grid-container--card.card5 {
+  .grid-container__card.card5 {
     grid-area: card5; }

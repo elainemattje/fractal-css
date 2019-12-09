@@ -1,6 +1,6 @@
 .card {
     box-shadow: 3px 3px 6px 1px rgba(0,0,0,0.75);
-    width: 340px;
+    width: 100%;
     display: grid;
     
     &__image {
@@ -21,7 +21,7 @@
     }
 
     &--big{
-        width: 700px;
+        //width: 700px;
         height: 400px;
         padding: 100px 100px 154px 100px;
         background-image: url("http://www.viajantecomum.com/wp-content/uploads/2017/04/praia-de-bacutia-1.jpg");
