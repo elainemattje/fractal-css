@@ -5,6 +5,7 @@
     
     &__image {
         height: 200px;
+        image-rendering: cover;
     }
 
     &__content {
@@ -27,7 +28,6 @@
         padding: 100px 100px 154px 100px;
         background-image: url("http://www.viajantecomum.com/wp-content/uploads/2017/04/praia-de-bacutia-1.jpg");
         background-size: cover;
-
     }
 
     & .likes-comments-share{

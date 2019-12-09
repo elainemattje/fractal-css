@@ -1,9 +1,9 @@
 .comments{
     display: flex;
     
+    
 
     &--img{
-        // justify-content: flex-end;
         width: 16px;
         height: 14.1px;
         margin: 0 10px 0 0;
@@ -13,5 +13,6 @@
         font-family: $font-primary;
         font-size: 14px;
         font-weight: bold;
+        margin: 0 10px 0 0;
     }
 }
