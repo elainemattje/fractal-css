@@ -18,37 +18,40 @@
         &.text{
             width: 100%;              
         }
+
     }
 
-    &--big{
-        //width: 700px;
+    &--big{        
+        grid-column-end: span 2;
         height: 400px;
         padding: 100px 100px 154px 100px;
         background-image: url("http://www.viajantecomum.com/wp-content/uploads/2017/04/praia-de-bacutia-1.jpg");
         background-size: cover;
 
     }
+
+    & .likes-comments-share{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    & .likes-comments{
+        display: flex;
+        flex-direction: row;
+        width: 45%;
+        justify-content: space-between;
+    }
+    
+    & .title{
+        display: flex;
+        flex-flow: row wrap;   
+        justify-content: space-between; 
+        padding-bottom: 40px;  
+    }
 }
 
-.likes-comments-share{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 
-.likes-comments{
-    display: flex;
-    flex-direction: row;
-    width: 45%;
-    justify-content: space-between;
-}
-
-.title{
-    display: flex;
-    flex-flow: row wrap;   
-    justify-content: space-between; 
-    padding-bottom: 40px;  
-}
 
 
 

@@ -3,7 +3,7 @@
     height: auto;
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     grid-gap: 20px;
     padding: 20px;
@@ -17,11 +17,13 @@
     // Tablet
     @media screen and (min-width: 768px){
         background-color: green; 
+        grid-template-columns: 1fr;
     }
 
     // Desktop
     @media screen and (min-width: 1024px){
         background-color: red; 
+        grid-template-columns: 3fr 1fr;
     }
 
 }
@@ -32,40 +34,28 @@
     margin: 40px 0 20px 0;
 }
 
-.grid-container__news .text--p3{
-    margin: 20px 0 20px 0;   
+.grid-container__news{
+    & .text--p3{        
+        margin: 20px 0 20px 0; 
+    }  
 }
 
 .grid-container__card{
-        width: 100%;
-        display: grid;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 400px;
+    grid-gap: 20px; 
+
+         // Tablet
+    @media screen and (min-width: 768px){
+        grid-template-columns: 1fr 1fr;
+    }
+
+    // Desktop
+    @media screen and (min-width: 1024px){
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 400px 400px;
-        grid-gap: 20px; 
-        grid-template-areas:
-        "card1 big big"
-        "card3 card4 card5";
-        
-        
-        &.card1{
-            grid-area: card1;
-        }
-        
-        &.big{
-            grid-area: big;
-        }
-
-        &.card3{
-            grid-area: card3;
-        }
-        
-        &.card4{
-            grid-area: card4;
-        }
-
-        &.card5{
-            grid-area: card5;
-        }
+    }
 
 }
 
