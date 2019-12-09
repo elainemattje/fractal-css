@@ -436,7 +436,7 @@ h4 {
     background-color: transparent;
     src: "/assets/icons/profile-black.png"; }
 
-.text, span {
+.text {
   font-family: "Arial";
   color: #333333;
   font-weight: normal;
@@ -447,9 +447,10 @@ h4 {
   font-style: normal;
   letter-spacing: normal;
   text-align: left; }
-
-.--bold {
-  font-weight: bold; }
+  .text.--bold {
+    font-weight: bold; }
+  .text.grid {
+    margin: 20px 0 20px 0; }
 
 .divisao {
   width: 320px;
@@ -477,6 +478,8 @@ h4 {
     height: 14.1px;
     margin: 0 10px 0 0; }
   .likes--bold {
+    font-family: "Arial";
+    font-size: 14px;
     font-weight: bold; }
 
 .profile {
@@ -495,11 +498,12 @@ h4 {
     border-radius: 0; }
 
 .webpage {
-  display: flex; }
+  display: flex;
+  margin-top: 20px; }
   .webpage--img {
     width: 16px;
     height: 16px;
-    margin: 0 10px 0 0; }
+    margin-right: 10px; }
   .webpage--bold {
     font-weight: bold; }
 
@@ -544,12 +548,21 @@ h4 {
 
 .grid-container {
   width: 1440px;
+  height: auto;
   display: grid;
   grid-template-columns: 1060px 340px;
-  grid-template-rows: 400px 400px;
+  grid-template-rows: auto auto;
   grid-gap: 20px;
   padding: 20px;
   background-color: #ff6a67; }
+  .grid-container.top {
+    padding: 36px 0 39px 0; }
+
+.h3 {
+  margin: 40px 0 20px 0; }
+
+.right .text--p3 {
+  margin: 20px 0 20px 0; }
 
 .grid-container--card {
   width: 1100px;
@@ -568,9 +581,3 @@ h4 {
     grid-area: card4; }
   .grid-container--card.card5 {
     grid-area: card5; }
-
-.right.top {
-  padding: 36px 0 39px 0; }
-
-.right.p3 {
-  padding: 20px 0 20px 0; }

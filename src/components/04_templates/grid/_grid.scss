@@ -1,11 +1,25 @@
 .grid-container{
     width: 1440px;
+    height: auto;
     display: grid;
     grid-template-columns: 1060px 340px;
-    grid-template-rows: 400px 400px;
+    grid-template-rows: auto auto;
     grid-gap: 20px;
     padding: 20px;
     background-color: #ff6a67;  
+
+
+    &.top{
+        padding: 36px 0 39px 0;
+    }       
+}
+
+.h3{
+    margin: 40px 0 20px 0;
+}
+
+.right .text--p3{
+    margin: 20px 0 20px 0;   
 }
 
 .grid-container--card{
@@ -43,14 +57,4 @@
 
 
 
-.right{
-    
-    &.top{
-        padding: 36px 0 39px 0;
-    }
-    
-    &.p3{
-        padding: 20px 0 20px 0;
-    }
-}
 

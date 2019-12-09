@@ -1,4 +1,4 @@
-.text, span {
+.text{
     font-family: $font-primary;
     color: $color-primary;
     font-weight: normal;
@@ -9,8 +9,16 @@
     font-style: normal;
     letter-spacing: normal;
     text-align: left;
-    }
     
-    .--bold{
+    &.--bold{
     font-weight: bold;
     }
+
+    &.grid{
+        margin: 20px 0 20px 0;
+    }
+
+}
+
+
+
